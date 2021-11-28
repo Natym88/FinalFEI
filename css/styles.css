@@ -7,10 +7,19 @@
 }
 
 header{
-    margin: 15vh 5vh;
+    margin: 15vh 5vh 0 5vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+header nav img{
+    display: none;
+}
+
+nav ul{
+    list-style-type: none;
 }
 
 header nav ul{
@@ -18,7 +27,6 @@ header nav ul{
     color: #242E52;
     justify-content: space-evenly;
     width: 35vw;
-    list-style-type: none;
 }
 
 button{
@@ -27,16 +35,21 @@ button{
     border-radius: 25px;
     border: none;
     padding: 12px 25px;
+    box-shadow: 2px 1px 10px #f38f75;
+}
+
+header button{
+    box-shadow: 1px 1px 10px #474347;
 }
 
 p{
     font-weight: 500;
-    margin: 20px 12vw 20px 0;
+    margin: 20px 0 20px 0;
 }
 
 section{
     display: flex;
-    margin: 3vw 10vw 5vw 10vw;
+    margin: 5vw;
     align-items: center;
 }
 
@@ -45,7 +58,7 @@ main section:nth-child(2){
 }
 
 section article{
-    margin: 5%;
+    margin-left: 5%;
 }
 
 h2{
@@ -57,6 +70,10 @@ h2{
 main section:nth-child(1) h2{
     font-size: 58px;
     text-align: left;
+}
+
+main section:nth-child(1)>article:nth-child(2) img{
+    width: 45vw;
 }
 
 main section:nth-child(2) h2{
@@ -76,6 +93,7 @@ main section:nth-child(2) h2{
 .comentarios{
     display: flex;
     flex-direction: column;
+    width: 30vw;
 }
 
 .comentarios p{
@@ -115,6 +133,10 @@ main section:nth-child(2) article:nth-child(2)>div{
     margin-bottom: 25px;
 }
 
+.puntitos{
+    display: none;
+}
+
 main{
     display: flex;
     flex-direction: column;
@@ -125,7 +147,7 @@ footer{
     margin-top: 25vh;
 }
 
-footer div:nth-child(1){
+footer>div:nth-child(1){
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -134,15 +156,292 @@ footer div:nth-child(1){
     padding: 0 10vw;
 }
 
-footer div:nth-child(1) p{
+footer>div:nth-child(1) p{
     color: white;
     font-weight: 500;
     font-size: 40px;
     width: 25vw;
 }
 
-footer div:nth-child(1) button{
+footer>div:nth-child(1) button{
     background-color: white;
     color: #F3603B;
+    box-shadow: 2px 2px 10px #575150;
 }
 
+footer>div:nth-child(2){
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 30vh;
+    padding: 5vh 0;
+}
+
+footer>div:nth-child(2)>div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 5vh;
+    flex-wrap: wrap;
+}
+
+footer>div:nth-child(2) nav ul{
+    display: flex;
+    justify-content: space-between;
+} 
+
+footer>div:nth-child(2)>nav ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 25vh;
+    width: 30vw;
+}
+
+footer>div:nth-child(2)>nav ul li{
+    padding-bottom: 15px;
+    padding-left: 10%;
+}
+
+footer>div:nth-child(2)>nav ul li a{
+    color: white;
+    text-decoration: none;
+   
+}
+
+/* footer>div:nth-child(2)>div:nth-last-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+} */
+
+footer div:nth-last-child(1){
+    color: #8C8C94;
+    background-color: black;
+    position: relative;
+}
+
+footer div:nth-last-child(1) p{
+    position: absolute;
+    bottom: 15px;
+    right: 11vw;
+}
+
+footer form input{
+    border-radius: 20px;
+    height: 40px;
+    border: none;
+}
+
+footer form input:nth-child(2){
+    color: white;
+    background-color: #F3603B;
+    width: 5vw;
+    margin-left: 5px;
+}
+
+/* Prueba para poner un botón de volver arriba. (Funciona!)
+.volver{
+    position: fixed;
+    bottom: 30px;
+    right: 5px;
+    border: #F3603B solid 3px;
+    border-radius: 5px;
+    background-color: blueviolet;
+    color: white;
+} */
+
+@media (max-width: 375px) {
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    header{
+        justify-content: space-between; 
+        padding: 15px;
+        margin: 0;
+    }
+
+    header nav ul{
+        display: none;
+    }
+
+    header nav img{
+        display: initial;
+    }
+
+    header button{
+        display: none;
+        width: 0;
+    }
+
+    main section{
+        flex-wrap: wrap;
+        width: 90vw;
+        align-items: center;
+        margin: 10px;
+        padding: 0;
+    }
+
+    main section:nth-child(1)>article:nth-child(2){
+        order: 1;
+    }
+
+    main section:nth-child(1)>article:nth-child(2) img{
+        width: 90vw;
+    }
+
+    main section:nth-child(1)>article:nth-child(1){
+        order: 2;
+        align-items: center;
+    }
+
+    main section:nth-child(1)>article h2{
+        text-align: center;
+        font-size: 40px;
+    }
+
+    main section:nth-child(2)>article h2{
+        text-align: center;
+    }
+
+    main section:nth-child(2)>article:nth-child(2) div div:nth-child(2){
+        width: 70vw;
+    }
+
+    main section:nth-child(2)>article:nth-child(2) div div:nth-child(2) p{
+        margin: 20px 0 20px 0;
+        padding: 0;
+        width: 85vw;
+        text-align: left;
+        position: relative;
+        right: 66px;
+    }
+
+    main section article{
+        margin: 15px;
+        padding: 0;
+        align-items: center;
+    }
+
+    .comentarios{
+        align-items: flex-start;
+    }
+
+    *{
+        text-align: center;
+        align-items: center;
+    }
+    
+    .reseñas article{
+        display: none;
+        margin-bottom: 8px;
+    }
+
+    .reseñas article:nth-child(2){
+        display: initial;
+    }
+
+    .puntitos{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .puntitos div{
+        width: 5px;
+        height: 5px;
+        border: solid #F3603B 1px;
+        border-radius: 100%;
+        margin-left: 3px;
+    }
+
+    .puntitos div:nth-child(2){
+        background-color: #F3603B;
+    }
+
+    footer{
+        margin-top: 25px;
+        height: initial;
+    }
+
+    footer>div:nth-child(1){
+        margin: 15px 0 0 0;
+        justify-content: center;
+        flex-direction: column;
+        height: initial;
+        padding: 70px 40px;
+    }
+
+    footer>div:nth-child(1) p{
+        width: 75vw;
+        margin: 0 0 15px 0;
+    }
+
+    footer>div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        height: initial;
+    }
+
+    .suscribete{
+        width: 90vw;
+        margin-bottom: 10px;
+        order: 1;
+    }
+
+    .suscribete input:nth-child(1){
+        width: 65vw;
+    }
+
+    .suscribete input:nth-child(2){
+        width: 20vw;
+    }
+
+    .nav{
+        order: 2;
+        padding: 0;
+        margin: 20px;
+        width: 80vw;
+    }
+
+    .nav ul li{
+        width: 45vw;
+        text-align: left;
+    }
+
+    footer>div:nth-child(2)>div:nth-child(1){
+        order: 3;
+    }
+    
+    .social{
+        margin-bottom: 20px;
+        order: 1;
+    }
+
+    .social ul{
+        width: 70vw;
+        justify-content: space-around;
+    }
+
+    .social ul li img{
+        height: 5vh;
+    }
+
+    footer>div:nth-child(2)>div:nth-child(1) img{
+        order: 2;
+    }
+
+    .derechos{
+        margin-top: 20px;
+        right: 25px;
+    }
+}
