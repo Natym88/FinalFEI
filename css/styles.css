@@ -29,9 +29,19 @@ button{
     padding: 12px 25px;
 }
 
+p{
+    font-weight: 500;
+    margin: 20px 12vw 20px 0;
+}
+
 section{
     display: flex;
-    margin: 5vw;
+    margin: 3vw 10vw 5vw 10vw;
+    align-items: center;
+}
+
+main section:nth-child(2){
+    align-items: flex-start;
 }
 
 section article{
@@ -43,8 +53,6 @@ h2{
     font-size: 39.2px;
     text-align: center;
 }
-
-
 
 main section:nth-child(1) h2{
     font-size: 58px;
@@ -84,3 +92,57 @@ span{
 main section:nth-child(2) article:nth-child(2)>div{
     display: flex;
 }
+
+.reseñas{
+    justify-content: space-between;
+    margin: 5vh 7vw;
+}
+
+.reseñas article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reseñas article p{
+    margin: 25px 0;
+    color: #B9B9C1;
+    text-align: center;
+}
+
+.reseñas article img{
+    height: 15vh;
+    margin-bottom: 25px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer{
+    margin-top: 25vh;
+}
+
+footer div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25vh;
+    background-color: #F3603B;
+    padding: 0 10vw;
+}
+
+footer div:nth-child(1) p{
+    color: white;
+    font-weight: 500;
+    font-size: 40px;
+    width: 25vw;
+}
+
+footer div:nth-child(1) button{
+    background-color: white;
+    color: #F3603B;
+}
+
