@@ -76,6 +76,10 @@ main section:nth-child(1)>article:nth-child(2) img{
     width: 45vw;
 }
 
+.meVasAHacerCaso{
+    padding-right: 12vw;
+}
+
 main section:nth-child(2) h2{
     font-size: 36px;
     text-align: left;
@@ -107,6 +111,10 @@ span{
     margin: 6px 0;
 }
 
+main section:nth-child(2) article:nth-child(2){
+    padding-right: 7vw;
+}
+
 main section:nth-child(2) article:nth-child(2)>div{
     display: flex;
 }
@@ -117,6 +125,7 @@ main section:nth-child(2) article:nth-child(2)>div{
 }
 
 .reseñas article{
+    margin: 0 3%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -306,12 +315,16 @@ footer form input:nth-child(2){
         font-size: 40px;
     }
 
+    main section:nth-child(2)>article:nth-child(1){
+        width: 30vw;
+    }
+
     main section:nth-child(2)>article h2{
         text-align: center;
     }
 
     main section:nth-child(2)>article:nth-child(2) div div:nth-child(2){
-        width: 50vw;
+        width: 35vw;
     }
 
     main section:nth-child(2)>article:nth-child(2) div div:nth-child(2) p{
