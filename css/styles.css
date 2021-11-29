@@ -299,6 +299,7 @@ footer form input:nth-child(2){
 
     main section:nth-child(1)>article:nth-child(2){
         order: 1;
+       
     }
 
     main section:nth-child(1)>article:nth-child(2) img{
@@ -308,6 +309,7 @@ footer form input:nth-child(2){
     main section:nth-child(1)>article:nth-child(1){
         order: 2;
         align-items: center;
+        width: 90vw;
     }
 
     main section:nth-child(1)>article h2{
@@ -315,8 +317,16 @@ footer form input:nth-child(2){
         font-size: 40px;
     }
 
-    main section:nth-child(2)>article:nth-child(1){
-        width: 30vw;
+    .meVasAHacerCaso{
+        width: 90vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    .meVasAHacerCaso p{
+        padding: 20px;
+        text-align: center;
+        color: #B3B2B7;
     }
 
     main section:nth-child(2)>article h2{
